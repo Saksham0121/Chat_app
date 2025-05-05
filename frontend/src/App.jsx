@@ -1,9 +1,13 @@
-import { useState } from 'react'
+"use client"
+
+import { BrowserRouter as Router} from "react-router-dom"
+import Signup from "./pages/Signup"
 
 function App() {
-
   return (
-      <div className='flex text-4xl justify-center '>Hello World</div>
+    <Router>
+      <Signup/>
+    </Router>
   )
 }
 
