@@ -38,7 +38,7 @@ function Signup() {
       <div className="relative z-10 w-full max-w-md p-8 mx-auto space-y-8 bg-gray-900 rounded-2xl backdrop-blur-sm bg-opacity-80 shadow-[0_0_40px_rgba(8,_112,_184,_0.7)]">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-            Create Account
+            Chatting App
           </h2>
           <p className="mt-2 text-gray-400">Join our social network</p>
         </div>
