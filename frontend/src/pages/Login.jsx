@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import { signInWithEmailAndPassword } from "firebase/auth"
+import { auth } from "../firebase"
 import { EyeIcon, EyeOffIcon } from "lucide-react"
 import BackgroundAnimation from "../components/BackgroundAnimation"
 
@@ -19,11 +21,12 @@ function Login() {
     setLoading(true)
 
     try {
-      // Placeholder logic – replace with actual authentication logic if needed
-      // Simulate success
+      await signInWithEmailAndPassword(auth, email, password)
       navigate("/dashboard")
     } catch (error) {
-      setError("An error occurred. Please try again.")
+      setError(
+        error.code === "auth/invalid-credential" ? "Invalid email or password" : "An error occurred. Please try again.",
+      )
     } finally {
       setLoading(false)
     }
